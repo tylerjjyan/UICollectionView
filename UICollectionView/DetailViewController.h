@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Song.h"
 
 @interface DetailViewController : UIViewController
 
@@ -14,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *detailImage;
 @property (weak, nonatomic) IBOutlet UILabel *detailArtist;
 @property (weak, nonatomic) IBOutlet UILabel *detailTitle;
+@property (nonatomic) Song *song;
 
 @end
 

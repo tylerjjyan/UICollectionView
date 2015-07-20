@@ -50,13 +50,13 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([segue.identifier isEqualToString:@"showDetail"]) {
-        SongViewCellCollectionViewCell *songCell = (SongViewCellCollectionViewCell*)sender;
+        DetailViewController *item = (DetailViewController*)sender;
         
         DetailViewController *dVC = [segue destinationViewController];
         
-        dVC.detailTitle.text = songCell.titleLabel.text;
-        dVC.detailImage.image = songCell.artistImage.image;
-        dVC.detailArtist.text = songCell.artistLabel.text;
+        dVC.detailTitle.text = item.song.title;
+        dVC.detailImage.image = item.song.image;
+        dVC.detailArtist.text = item.song.artist;
     }
     
     
